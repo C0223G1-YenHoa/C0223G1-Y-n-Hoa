@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let inputPhysics;
+    let inputChemistry;
+    let inputBiology;
+    inputPhysics = prompt("Nhập điểm Lý");
+    inputChemistry = prompt("Nhập điểm Hóa");
+    inputBiology = prompt("Nhập điểm Sinh");
+    let Physics = parseInt(inputPhysics);
+    let Chemistry = parseInt(inputChemistry);
+    let Biology = parseInt(inputBiology);
+    let avg = (Physics + Chemistry + Biology)/3;
+    let sum = (Physics + Chemistry + Biology);
+    document.write("Điểm trung bình:"+avg);
+    document.write("<br/>");
+    document.write("Tổng:"+sum);
+</script>
+</html>

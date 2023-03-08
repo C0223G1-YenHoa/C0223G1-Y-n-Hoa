@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>Caculator</tr>
+    <tr>
+        <td><input type="text" id="first" />
+        <input type="text" id="second"/></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="caculator(this.id)" id="cong">Addition(+)</button>
+        <button type="button" onclick="caculator(this.id)" id="tru">Subtraction(-)</button>
+        <button type="button" onclick="caculator(this.id)" id="nhan">Multiplication(X)</button>
+        <button type="button" onclick="caculator(this.id)" id="chia">Division(/)</button></td>
+    </tr>
+    <br>
+    <tr><p id="Result"></p></tr>
+</table>
+</body>
+<script>
+    function caculator(id){
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        let Result;
+        first = parseInt(first)
+        second = parseInt(second)
+        console.log(id)
+        if (id=="cong"){
+            Result= "Result:" + (first + second)
+        }
+        if (id=="tru"){
+            Result= "Result:" + (first - second)
+        }
+        if (id=="nhan"){
+            Result= "Result:" + (first * second)
+        }
+        if (id=="chia"){
+            if (second != 0) {
+                Result= "Result:" + (first / second)
+            } else {
+                Result = "Result: Not a number"
+            }
+        }
+        document.getElementById("Result").innerHTML= Result;
+    }
+</script>
+</html>
