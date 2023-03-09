@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kiem_tra = prompt("Nhập điểm kiểm tra")*1;
+    let giua_ky = prompt("Nhập điểm thi giữa kì")*1;
+    let cuoi_ky =prompt("Nhập điểm thi cuối kì")*1;
+    let avg = (kiem_tra + giua_ky *2 + cuoi_ky*3)/6;
+    if (avg >= 8) {
+        alert("Học sinh giỏi");
+    } else if (avg >= 6.5) {
+        alert("Học sinh khá");
+    } else if (avg >= 5) {
+        alert("Học sinh trung bình");
+    } else alert("Học sinh yếu");
+</script>
+</body>
+</html>
