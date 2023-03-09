@@ -25,27 +25,27 @@
     function caculator(id){
         let first = document.getElementById("first").value;
         let second = document.getElementById("second").value;
-        let Result;
-        first = parseInt(first)
-        second = parseInt(second)
-        console.log(id)
+        let result;
+        first = parseInt(first);
+        second = parseInt(second);
+        console.log(id);
         if (id=="cong"){
-            Result= "Result:" + (first + second)
+            result= "Result:" + (first + second);
         }
         if (id=="tru"){
-            Result= "Result:" + (first - second)
+            result= "Result:" + (first - second);
         }
         if (id=="nhan"){
-            Result= "Result:" + (first * second)
+            result= "Result:" + (first * second);
         }
         if (id=="chia"){
             if (second != 0) {
-                Result= "Result:" + (first / second)
+                result= "Result:" + (first / second);
             } else {
-                Result = "Result: Not a number"
+                result = "Result: Not a number";
             }
         }
-        document.getElementById("Result").innerHTML= Result;
+        document.getElementById("Result").innerHTML= result;
     }
 </script>
 </html>
