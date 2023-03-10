@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soDien = prompt("Nhập vào số điện:") * 1;
+    let tieuThuBac1 = soDien * 1678;
+    let tieuThuBac2 = (soDien - 50) * 1734;
+    let tieuThuBac3 = (soDien - 100) * 2014;
+    let tieuThuBac4 = (soDien - 200) * 2536;
+    let tieuThuBac5 = (soDien - 300) * 2834;
+    let tieuThuBac6 = (soDien - 400) * 2927;
+    let result;
+    if (soDien > 0 && soDien <= 50) {
+        result = tieuThuBac1;
+        alert("Số tiền điện tiêu thụ của bạn là " + (result + result * 0.1));
+    } else if (soDien > 51 && soDien <= 100) {
+        result = tieuThuBac1 + tieuThuBac2;
+        alert("Số tiền điện tiêu thụ của bạn là " + (result + result * 0.1));
+    } else if (soDien > 101 && soDien <= 200) {
+        result = tieuThuBac1 + tieuThuBac2 + tieuThuBac3;
+        alert("Số tiền điện tiêu thụ của bạn là " + (result + result * 0.1));
+    } else if (soDien > 201 && soDien <= 300) {
+        result = tieuThuBac1 + tieuThuBac2 + tieuThuBac3 + tieuThuBac4;
+        alert("Số tiền điện tiêu thụ của bạn là " + (result + result * 0.1));
+    } else if (soDien > 301 && soDien <= 400) {
+        result = tieuThuBac1 + tieuThuBac2 + tieuThuBac3 + tieuThuBac4 + tieuThuBac5;
+        alert("Số tiền điện tiêu thụ của bạn là " + (result + result * 0.1));
+    } else result = tieuThuBac1 + tieuThuBac2 + tieuThuBac3 + tieuThuBac4 + tieuThuBac5 + tieuThuBac6;
+    alert("Số tiền điện tiêu thụ của bạn là " + (result + result * 0.1));
+
+</script>
+</body>
+</html> 

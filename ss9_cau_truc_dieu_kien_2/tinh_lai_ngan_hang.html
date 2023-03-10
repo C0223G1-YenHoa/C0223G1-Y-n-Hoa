@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let p = prompt("Nhập số tiền sẽ vay") * 1;
+    let r = prompt("Nhập lãi suất hằng tháng") * 1;
+    let n = prompt("Nhập số tháng sẽ vay") * 1;
+    let a = p * Math.pow((1 + r / 100), n);
+    let lai = a - p;
+    alert("Số tiền lãi bạn phải trả : " + lai);
+</script>
+</body>
+</html>

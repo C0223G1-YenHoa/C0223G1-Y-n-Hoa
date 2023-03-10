@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhapThang = prompt("Nhập thu nhập tháng") * 1;
+    let luongDongBh = prompt("Nhập lương đóng bảo hiểm") * 1;
+    let soNguoiPhuThuoc = prompt("Nhập số người phụ thuộc") * 1;
+    let bhBatBuoc = luongDongBh * 0.08 + luongDongBh * 0.015 + luongDongBh * 0.01;
+    let giamTruBanThan = 11000000;
+    let giamTruNguoiPhuThuoc = soNguoiPhuThuoc * 4400000;
+    let thuNhapThue = thuNhapThang - bhBatBuoc - giamTruBanThan - giamTruNguoiPhuThuoc;
+    if (thuNhapThue <= 5000000) {
+        alert("Thuế thu nhập cá nhân phải nộp: " + (thuNhapThue * 0.05));
+    } else if (thuNhapThue > 5000000 && thuNhapThue <= 10000000) {
+        alert("Thuế thu nhập cá nhân phải nộp: " + (thuNhapThue * 0.1 - 250000));
+    } else if (thuNhapThue > 10000000 && thuNhapThue <= 18000000) {
+        alert("Thuế thu nhập cá nhân phải nộp: " + (thuNhapThue * 0.15 - 750000));
+    } else if (thuNhapThue > 18000000 && thuNhapThue <= 32000000) {
+        alert("Thuế thu nhập cá nhân phải nộp: " + (thuNhapThue * 0.2 - 1650000));
+    } else if (thuNhapThue > 32000000 && thuNhapThue <= 52000000) {
+        alert("Thuế thu nhập cá nhân phải nộp: " + (thuNhapThue * 0.25 - 3250000));
+    } else if (thuNhapThue > 52000000 && thuNhapThue <= 80000000) {
+        alert("Thuế thu nhập cá nhân phải nộp: " + (thuNhapThue * 0.3 - 5850000));
+    } else alert("Thuế thu nhập cá nhân phải nộp: " + (thuNhapThue * 0.35 - 9850000));
+</script>
+</body>
+</html>
