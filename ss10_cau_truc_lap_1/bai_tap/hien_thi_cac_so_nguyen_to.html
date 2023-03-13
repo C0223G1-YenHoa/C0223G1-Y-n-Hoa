@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // tinh n so nguyen to dau tien
+    function checkSNT(number) {
+        console.log(number);
+
+        let countSnt = 0; //Số lượng số nguyên tố so với require
+        let n;
+        let m;
+        for (n = 2; n < 1000; n++) {
+            let count = 0; //bien đếm ước của SNT doi voi n
+            console.log(countSnt)；
+            if (countSnt < number) {
+                for (m = 1; m <= n; m++) {
+                    if (n % m == 0) {
+                        count += 1;
+                    }
+                }
+                if (count == 2) {
+                    document.write(n + "<br>");
+                    countSnt += 1;
+                }
+
+            } else {
+                break;
+            }
+        }
+    }
+
+    // nhap n so nguyen toec
+    let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
+    // tinh n so nguyen to dau tien
+    checkSNT(number); //gọi hàm
+</script>
+</body>
+</html>

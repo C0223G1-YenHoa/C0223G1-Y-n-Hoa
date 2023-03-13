@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function nhietDo(t) {
+        while (t < 20 || t > 100) {
+            if (t < 20) {
+                alert("Vui lòng tăng nhiệt độ");
+            } else {
+                alert("Vui lòng giảm nhiệt độ");
+            }
+            t = prompt("Nhập nhiệt độ hiện tại ") * 1;
+        }
+    }
+
+    let t = parseInt(prompt("Nhập nhiệt độ hiện tại "));
+    nhietDo(t);
+</script>
+</body>
+</html>
