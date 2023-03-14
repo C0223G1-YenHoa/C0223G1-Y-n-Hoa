@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="game1()"> Bắt đầu</button>
+<script>
+    function game1() {
+        let number = parseInt(prompt("Nhập vào số bạn muốn đoán trong khoảng lớn nhất "));
+        let random = parseInt(Math.random() * number);
+        for (let i = 1; i <= 3; i++) {
+            let number1 = prompt("Nhập vào số bạn đoán ") * 1;
+            if (number1 < random) {
+                alert("Số bạn đoán bé hơn");
+                number1;
+            } else if (number1 > random) {
+                alert("Số bạn đoán lớn hơn");
+                number1;
+            } else if (number1 == random) {
+                alert("Chúc mừng bạn đã đoán đúng");
+                break;
+            }
+        }
+        alert("Rất tiếc ! Bạn đã hết lượt đoán.");
+    }
+
+</script>
+</body>
+</html>

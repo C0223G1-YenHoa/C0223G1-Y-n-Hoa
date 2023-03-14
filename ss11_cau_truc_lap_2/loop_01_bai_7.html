@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    for (n = 1; n <= 100; n++) {
+        console.log(n);
+        if (n % 3 !== 0 && n % 5 !== 0) {
+            document.write(n + "<br>");
+        } else if (n % 3 == 0 && n % 5 == 0) {
+            document.write("FizzBuzz" + "<br>");
+        } else if (n % 3 == 0) {
+            document.write("Fizz" + "<br>");
+        } else if (n % 5 == 0) {
+            document.write("Buzz" + "<br>");
+        }
+    }
+</script>
+</body>
+</html>
