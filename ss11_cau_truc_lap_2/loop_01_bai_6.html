@@ -7,14 +7,15 @@
 <body>
 <script>
     let count = 0; //số lượng số tự nhiên chia hết cho 7
-    let n;
+    let n = 1;
     let total = 0;
-    for (n = 1; count < 30; n++) {
+    while (count < 30) {
         if (n % 7 == 0) {
             console.log(n);
             count++;
             total += n;
         }
+        n++;
     }
     document.write(total);
 </script>
