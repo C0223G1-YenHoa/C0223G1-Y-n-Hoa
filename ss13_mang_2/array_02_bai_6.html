@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ['William', 'Henry', 'Gates', 'III', 'is', 'an', 'American', 'business', 'magnate', '-', 'investor', '-', 'philanthropist', '-', 'writer'];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === "-") {
+            index = i;
+            arr[index] = "_";
+        }
+    }
+    console.log(arr);
+    alert(arr.join(" "));
+</script>
+</body>
+</html>

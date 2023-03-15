@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = "William Henry Gates III is an American business magnate, investor";
+    let b = "William Henry Gates III is an American business magnate";
+    for (let i in a) {
+        for (let j in b) {
+            if (a[i] === b[j] && a.length === b.length) {
+                alert("Giống nhau")
+            } else {
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
