@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [4, 8, -10, 14, -12, 1, -9, 20, -18, 5];
+    let v = prompt("Enter your number: ") * 1;
+    let index = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (v == numbers[i]) {
+            index = i;
+        }
+    }
+    for (let j = index; j < numbers.length; j++) {
+        numbers[j] = numbers[j + 1];
+    }
+    numbers[numbers.length - 1] = 0;
+    console.log(numbers);
+</script>
+</body>
+</html>

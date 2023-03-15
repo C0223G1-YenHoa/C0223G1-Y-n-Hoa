@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = prompt("Enter your numbers : ");
+    let arrs = numbers.split("");
+    for (let i = 0; i < numbers.length; i++) {
+        if (arrs[i] % 2 == 0 && arrs[i + 1] % 2 == 0) {
+            arrs.splice(i + 1, 0, "-");
+        }
+    }        console.log(arrs.join(""));
+</script>
+</body>
+</html>

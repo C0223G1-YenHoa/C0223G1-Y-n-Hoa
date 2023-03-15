@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [4, 8, 10, 14, 12, 1, 9, 20, 18, 5];
+    let max = arr[0];
+    let index = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            index = i;
+            console.log(max);
+        }
+    }
+    document.write("Max is " + max + " at position " + index);
+</script>
+</body>
+</html>

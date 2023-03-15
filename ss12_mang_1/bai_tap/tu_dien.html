@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập từ:</td>
+        <td><input type="text" id="dictionary"></td>
+        <td>
+            <button type="button" onclick="translation()"> Dịch</button>
+        </td>
+    </tr>
+</table>
+<br>
+<p id="result"></p>
+</body>
+<script>
+    function translation() {
+        let eng = document.getElementById("dictionary").value;
+        let english = ["apple", "banana", "holiday", "travel", "table", "chair", "pig", "mouse", "cat"];
+        let vietnamese = ["quả táo", "quả chuối", "kỳ nghỉ", "du lịch", "cái bàn", "cái ghế", "con heo", "con chuột", "con mèo"];
+        let result;
+        for (let i = 0; i < english.length; i++) {
+            if (eng == english[i]) {
+                        result = vietnamese[i];
+                        console.log(result);
+                break;
+                }
+            else {
+                    result = "Không tìm thấy từ bạn yêu cầu.";
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+    }
+</script>
+</html>

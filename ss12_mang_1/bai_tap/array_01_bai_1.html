@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["4", "8", "10", "14", "12", "1", "9", "20", "18", "5"];
+    let count = 0;
+    let sum;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+            sum=count++;
+            document.write(arr[i] + ",");
+        }
+    }
+    document.write(" có " + sum + " phần tử lớn hơn 10");
+</script>
+</body>
+</html>
