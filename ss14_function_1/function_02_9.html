@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập vào một string");
+
+    function checkString() {
+        let count = 0;
+        let array = [];
+        for (let j = 0; j < arr.length; j++) {
+            array.push(arr[j]);
+        }
+        console.log(array);
+        let character = prompt("Nhập vào một kí tự cần kiểm tra");
+        for (let i = 0; i < array.length; i++) {
+            if (character == array[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            alert("Kí tự " + character + " có trong array và xuất hiện " + count + " lần");
+        } else {
+            alert("-1")
+        }
+    }
+
+    checkString();
+</script>
+</body>
+</html>

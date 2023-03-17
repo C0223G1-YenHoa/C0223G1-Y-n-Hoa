@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập một số <input type="number" onchange="myFunction(this.value)"
+                   oninput="myFunction(this.value)">
+<p><span id="result"></span></p>
+</body>
+<script>
+    function myFunction(number) {
+        number = parseFloat(number);
+        document.getElementById("result").innerHTML = number + 1;
+    }
+</script>
+</html>
