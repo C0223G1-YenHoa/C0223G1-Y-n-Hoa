@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function changeNumber(x, y) {
+        t = x.value;
+        x.value = y.value;
+        y.value = t;
+    }
+    let a = {value: ""};
+    let b = {value: ""};
+    a.value = prompt("Enter a :") * 1;
+    b.value = prompt("Enter b :") * 1;
+    changeNumber(a, b);
+    alert("a = " + a.value + "," + " b = " + b.value);
+</script>
+</body>
+</html>

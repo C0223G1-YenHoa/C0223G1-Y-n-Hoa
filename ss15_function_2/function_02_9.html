@@ -16,15 +16,17 @@
         }
         console.log(array);
         let character = prompt("Nhập vào một kí tự cần kiểm tra");
+        let flag=false;
         for (let i = 0; i < array.length; i++) {
             if (character == array[i]) {
                 count++;
+                flag=true;
             }
         }
-        if (count > 0) {
+        if (flag) {
             alert("Kí tự " + character + " có trong array và xuất hiện " + count + " lần");
         } else {
-            alert("-1")
+            alert("-1");
         }
     }
 

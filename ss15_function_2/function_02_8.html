@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("Nhập số lượng phần tử");
+    function reverseArray() {
+        let arr = [];
+        for (let i = 0; i < numbers; i++) {
+            let j = +prompt("Nhập số lượng phần tử thứ " + i);
+            arr.push(j);
+        }
+        let arr1 = [];
+        for (let element = arr.length - 1; element >= 0; element--) {
+            arr1.push(arr[element]);
+        }
+        alert("Mảng số nguyên đảo ngược là :" + arr1);
+    }
+    reverseArray();
+</script>
+</body>
+</html>
