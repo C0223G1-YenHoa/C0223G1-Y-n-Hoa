@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(degreeC) {
+            this.degreeC = degreeC;
+        }
+
+        setDegree(degreeC) {
+            if (degreeC >= -273) {
+                this.degreeC = degreeC;
+            }
+        }
+
+        changeF() {
+            return (this.degreeC * 1.8) + 32;
+        }
+
+        changeK() {
+            return this.degreeC + 273.15;
+        }
+
+    }
+
+    let myTemperature = new Temperature(25);
+    myTemperature.setDegree(-300);
+    document.write("Nhiệt độ F là: " + myTemperature.changeF() + "<br>" + "Nhiệt độ K là: " + myTemperature.changeK());
+
+</script>
+</body>
+</html>
