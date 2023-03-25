@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+</body>
+<script>
+    let arrayPrice = [15000, 20000, 20000, 20000, 10000, 25000];
+    let count = 0;
+    let amount = 0;
+    let choice;
+    let i = 0;
+    do {
+        alert("1.Cafe  2.Cam vắt  3.Nước ép cà rốt  4.Nước ép cà chua  5.Nước lọc  6.Nước dừa");
+        choice = prompt("Nhập món:") * 1;
+        alert(arrayPrice[choice]);
+        amount = prompt("Nhập số lượng: ") * 1;
+        count += amount * arrayPrice[i];
+        i++;
+        alert("Tổng hóa đơn của bạn là " + count);
+        console.log(count);
+    } while (choice != 7);
+</script>
+</html>

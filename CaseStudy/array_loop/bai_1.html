@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = prompt('Enter the numbers of number you want:  ') * 1;
+    let array = [];
+    for (let i = 0; i < numbers; i++) {
+        let number = prompt('Enter the ' + i + ' number: ') * 1;
+        array.push(number);
+    }
+    let preFixSums = [];
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+        preFixSums.push(sum);
+    }
+    alert(preFixSums);
+</script>
+</body>
+</html>

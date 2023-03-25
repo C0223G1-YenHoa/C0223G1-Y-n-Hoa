@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [4, 6, 8, 9];
+    let denominators = [3, 4, 6, 3];
+    let max = 0;
+    let index;
+    for (let i = 0; i < numerators.length; i++) {
+        if (numerators[i] / denominators[i] > max) {
+            max = numerators[i] / denominators[i];
+            index = numerators[i];
+        }
+    }
+    alert(numerators.indexOf(index));
+</script>
+</body>
+</html>

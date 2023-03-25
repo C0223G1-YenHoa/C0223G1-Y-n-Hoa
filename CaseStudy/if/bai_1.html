@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = prompt("Enter your salary: ") * 1;
+    let realSalary;
+    let tax;
+    if (salary == 15000000) {
+        tax = salary * 0.2;
+    } else if (salary >= 7000000 && salary < 15000000) {
+        tax = salary * 0.1;
+    } else if (salary < 7000000) {
+        tax = salary * 0.05;
+    }
+    realSalary = salary - tax;
+    alert("Your real salary is: " + realSalary + " and your personal tax is: " + tax);
+</script>
+</body>
+</html>
