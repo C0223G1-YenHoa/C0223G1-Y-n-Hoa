@@ -72,18 +72,6 @@
         let module = prompt("Nhập module:");
         let add = new Information(id, name, grade, email, dayOfBirth, module);
         array.push(add);
-        for (let i in array) {
-            if (id == array[i]) {
-                alert("Mã học viên đã tồn tại");
-            }
-            if (name.length > 50) {
-                alert("Tên học viên chỉ được tối đa 50 kí  tự!");
-            }
-            if (module > 6 || module < 1) {
-                alert(prompt("Nhập module:"));
-            }
-
-        }
         load();
     }
 
