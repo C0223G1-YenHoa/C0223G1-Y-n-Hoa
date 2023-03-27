@@ -7,18 +7,34 @@
 <body>
 <script>
     let string = prompt("Enter your string:");
-    let array = string.split("");
-    let array1 = [];
-    // let space = "";
-    for (let i = 0; i < array.length; i++) {
-        array1.push(array[i]);
-    }
-    for (let i = 0; i < array1.length; i++) {
-        if (array1[i] === ' ') {
-            array1.splice(array1[i], 1);
+    document.write('Chuỗi kí tự ban đầu: ' + string + "<br>");
+    let array = string.split(" ");
+    let result = '';
+    let max = '';
+
+    function replaceSpaceAndUpperCase() {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] != '') {
+                // tìm chuỗi dài nhất
+                if (array[i].length > max.length) {
+                    max = array[i];
+                }
+                // chuẩn hóa
+                array[i] = array[i].toLowerCase();
+                let arr = array[i].split('');
+                arr[0] = arr[0].toUpperCase();
+                let a = arr.join('');
+                console.log(a);
+                result += a + ' ';
+            }
         }
-        console.log(array1);
+        result = result.trim();
     }
+
+    replaceSpaceAndUpperCase()
+    document.write("Chuỗi kí tự sau khi được chuẩn hóa: " + result + "<br>");
+    document.write("Chuỗi kí tự dài nhất: " + max);
+
 
 </script>
 </body>

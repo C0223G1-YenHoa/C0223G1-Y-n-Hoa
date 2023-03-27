@@ -16,7 +16,7 @@
     do {
         alert("1.Cafe  2.Cam vắt  3.Nước ép cà rốt  4.Nước ép cà chua  5.Nước lọc  6.Nước dừa");
         choice = prompt("Nhập món:") * 1;
-        alert(arrayPrice[choice]);
+        alert(arrayPrice[choice - 1]);
         amount = prompt("Nhập số lượng: ") * 1;
         count += amount * arrayPrice[i];
         i++;

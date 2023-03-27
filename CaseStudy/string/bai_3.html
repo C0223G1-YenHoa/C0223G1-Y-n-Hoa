@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = prompt("Enter the first string: ");
+    let arr1 = s1.split('');
+    let s2 = prompt("Enter the second string: ");
+    let arr2 = s2.split('');
+    let arr3 = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                arr3.push(arr1[i]);
+            }
+        }
+    }
+    let arr4 = [];
+    for (let i = 0; i < arr3.length; i++) {
+        if (i == arr3.indexOf(arr3[i])) {
+            arr4.push(arr3[i]);
+        }
+    }
+    console.log(arr4);
+
+    let amount = [];
+    let character = [];
+    for (let i = 0; i < arr4.length; i++) {
+        let count1 = 0;
+        let count2 = 0;
+        for (let j = 0; j < arr1.length; j++) {
+            if (arr4[i] == arr1[j]) {
+                count1++;
+                console.log(count1);
+            }
+        }
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr4[i] == arr2[j]) {
+                count2++;
+            }
+        }
+        if (count1 >= count2) {
+            amount.push(count2);
+            character.push(arr4[i]);
+        } else if (count2 > count1) {
+            amount.push(count1);
+            character.push(arr4[i]);
+        }
+
+    }
+    console.log(amount);
+    console.log(character);
+    let result = "s1 và s2 có " + arr4.length + " kí tự chung: Có ";
+    for (let i = 0; i < amount.length; i++) {
+        result += amount[i] + " kí tự " + character[i] + ",";
+    }
+    document.write(result);
+</script>
+</body>
+</html>

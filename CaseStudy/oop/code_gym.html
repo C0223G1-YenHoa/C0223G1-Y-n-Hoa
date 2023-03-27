@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th, td {
+            width: 150px;
+            text-align: center;
+        }
+
+        table, th, tr, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<button onclick="addStudent()">Thêm học viên mới</button>
+<button onclick="editStudent()">Sửa thông tin học viên</button>
+<button onclick="deleteStudent()">Xóa học viên</button>
+<br>
+<div id="result"></div>
+<script>
+    class Information {
+        constructor(id, name, grade, email, dayOfBirth, module) {
+            this.id = id;
+            this.name = name;
+            this.grade = grade;
+            this.email = email;
+            this.dayOfBirth = dayOfBirth;
+            this.module = module;
+        }
+    }
+
+    let array = []
+
+    function load() {
+        let communication = '<table>' +
+            '    <tr>' +
+            '        <th>Mã học viên</th>' +
+            '        <th>Tên</th>' +
+            '        <th>Lớp</th>' +
+            '        <th>Email</th>' +
+            '        <th>Ngày sinh</th>' +
+            '        <th>Module</th>' +
+            ' </tr>';
+        for (let i in array) {
+            communication += '<tr>';
+            communication += '<td>' + array[i].id + '</td>'
+                + '<td>' + array[i].name + '</td>'
+                + '<td>' + array[i].grade + '</td>'
+                + '<td>' + array[i].email + '</td>'
+                + '<td>' + array[i].dayOfBirth + '</td>'
+                + '<td>' + array[i].module + '</td>';
+            communication += '</tr>';
+        }
+        communication += '</table>';
+        document.getElementById('result').innerHTML = communication;
+    }
+
+    function addStudent() {
+        let id = prompt("Nhập mã học viên:");
+        let name = prompt("Nhập họ và tên học viên:");
+        let grade = prompt("Nhập lớp của học viên:");
+        let email = prompt("Nhập email của học viên:");
+        let dayOfBirth = prompt("Nhập ngày sinh của học viên:");
+        let module = prompt("Nhập module:");
+        let add = new Information(id, name, grade, email, dayOfBirth, module);
+        array.push(add);
+        for (let i in array) {
+            if (id == array[i]) {
+                alert("Mã học viên đã tồn tại");
+            }
+            if (name.length > 50) {
+                alert("Tên học viên chỉ được tối đa 50 kí  tự!");
+            }
+            if (module > 6 || module < 1) {
+                alert(prompt("Nhập module:"));
+            }
+
+        }
+        load();
+    }
+
+    function deleteStudent() {
+        let deleteInformation = prompt("Nhập mã học viên bạn muốn xóa:");
+        alert(confirm("Bạn muốn xóa học viên này ?"));
+        for (let i in array) {
+            if (deleteInformation === array[i].id) {
+                array.splice(array[i], 1);
+            } else {
+                alert("Mã học viên không tồn tại.");
+            }
+        }
+        load();
+    }
+
+    function editStudent() {
+        let editInformation = prompt("Nhập mã học viên bạn muốn sửa thông tin:");
+        let index = null;
+        for (let i in array) {
+            if (editInformation != null) {
+                index = i;
+            } else {
+                alert("Mã học viên không tồn tại.");
+            }
+            console.log(array[i]);
+        }
+        array[index] = {
+            id: prompt('Nhập mã học viên'),
+            name: prompt("Nhập họ và tên học viên:"),
+            grade: prompt("Nhập lớp của học viên:"),
+            email: prompt("Nhập email của học viên:"),
+            dayOfBirth: prompt("Nhập ngày sinh của học viên:"),
+            module: prompt("Nhập module:")
+        };
+        load();
+    }
+</script>
+</body>
+</html>
