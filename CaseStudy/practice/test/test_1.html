@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let i = 1;
+    while (i <= 11) {
+        let numbers = prompt("Enter a number:") * 1;
+         if (i > 10) {
+             alert("Bạn đã nhập quá số lượng phần tử");
+             break;
+         }
+         arr.push(numbers);
+        i++;
+    }
+    alert(arr.length);
+    alert(arr);
+    let sum = 0;
+    let count = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] % 5 == 0) {
+            if (i % 3 == 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+    }
+    let avg = sum / count;
+    alert(avg);
+</script>
+</body>
+</html>

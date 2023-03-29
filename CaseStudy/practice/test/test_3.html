@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = prompt("Nhập độ dài của mảng:") * 1;
+    let array = [];
+    for (let i = 0; i < numbers; i++) {
+        let number = prompt("Nhập số thứ" + (i + 1));
+        array.push(number);
+    }
+    console.log(array)
+
+    function findFibobnaciNumbers(array) {
+        let arrFibolaci = [0, 1];
+        let num1 = 0;
+        let num2 = 1;
+        let num3 = 0
+        for (let i = 0; i <= 10; i++) {
+            num3 = num1 + num2;
+            num1 = num2;
+            num2 = num3;
+            arrFibolaci.push(num3);
+        }
+        let max = 0;
+        for (let i = 0; i <= array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        let result = [];
+        for (let i = 0; i <= max; i++) {
+            for (let j = 0; j <= array.length; j++) {
+                if (arrFibolaci[i] == array[j]) {
+                    result.push(array[j]);
+                }
+            }
+        }
+        console.log(result)
+        result.sort(function arrange(a, b) {
+            return a - b;
+        })
+        return result;
+    }
+    console.log(findFibobnaciNumbers(array))
+</script>
+</body>
+</html>
